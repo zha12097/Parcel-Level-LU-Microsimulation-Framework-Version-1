@@ -58,7 +58,7 @@ def run(config):
     # ══════════════════════════════════════════════════════════════════════
     #
     # The raw building inventory may contain records irrelevant to the model.
-    # Filter criteria (Chapter 4, §4.2.4):
+    # Filter criteria (Section 3):
     #
     #   INCLUDE:
     #     - status == "Existing" — currently standing buildings
@@ -92,7 +92,7 @@ def run(config):
     # coordinates that are imprecise (neighbourhood centroid rather than
     # actual building location).
     #
-    # Procedure (Chapter 4, §4.2.3):
+    # Procedure (Section 3):
     #   1. For records with existing coordinates:
     #      - Validate that point falls within study area boundary
     #      - Cross-check against satellite imagery for obvious misplacements
@@ -133,7 +133,7 @@ def run(config):
     #   - Point falls outside all parcels (e.g., in road right-of-way)
     #     → snap to nearest parcel centroid within a tolerance (e.g., 50m)
     #   - Multiple buildings on one parcel → all retained; they form a "project"
-    #     if built in the same year (see Chapter 4, §4.3.3, Figure 4.5)
+    #     if built in the same year (see Section 3)
     #
     # GTHA validation: Average of 1.07 buildings per parcel (2023 snapshot),
     # confirming the parcel as a reasonable decision-making unit.
