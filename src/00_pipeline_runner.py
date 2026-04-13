@@ -36,7 +36,7 @@ def run_pipeline(config):
     Stage 9 validates simulation outputs against observed data.
     """
 
-    # ── PART I: DIGITAL LANDSCAPE CONSTRUCTION (Chapter 3) ──────────────
+    # ── PART I: DIGITAL LANDSCAPE CONSTRUCTION (Section 3 & 4) ──────────────
 
     # Stage 1: Acquire and inventory all raw datasets
     # data_acquisition.run(config)
@@ -44,7 +44,7 @@ def run_pipeline(config):
     # Stage 2: Build the unified zoning-permission layer via hierarchical ML
     # zoning_landscape.run(config)
 
-    # ── PART II: SPATIO-TEMPORAL DATABASE (Chapter 5, §5.3) ─────────────
+    # ── PART II: SPATIO-TEMPORAL DATABASE (Section 3 & 4) ─────────────
 
     # Stage 3: Clean geometries, geocode buildings, assign to parcels
     # data_cleaning.run(config)
@@ -55,7 +55,7 @@ def run_pipeline(config):
     # Stage 5: Generate candidate explanatory attributes at multiple scales
     # feature_engineering.run(config)
 
-    # ── PART III: AGENT FILTERING & MARKET INTEGRATION (Chapter 5, §5.4–5.5) ─
+    # ── PART III: AGENT FILTERING & MARKET INTEGRATION (Section 4) ─
 
     # Stage 6: Apply zoning + saturation filters to define active agents
     # availability_filtering.run(config)
@@ -63,14 +63,14 @@ def run_pipeline(config):
     # Stage 7: Disaggregate meso-level market data to parcel level
     # market_disaggregation.run(config)
 
-    # ── PART IV: ECONOMETRIC ESTIMATION (Chapter 5, §5.5) ───────────────
+    # ── PART IV: ECONOMETRIC ESTIMATION (Section 4) ───────────────
 
     # Stage 8: Estimate the panel mixed logit in R
     #   This is the ONE executable stage — all others are pseudo-code.
     #   subprocess.run(["Rscript", "src/08_mixed_logit_estimation.R"], check=True)
     pass
 
-    # ── PART V: VALIDATION (Chapter 5, §5.6.6) ─────────────────────────
+    # ── PART V: VALIDATION (Section 4) ─────────────────────────
 
     # Stage 9: Compare simulated vs. observed market shares
     # validation.run(config)
